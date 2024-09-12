@@ -5,4 +5,9 @@ import vue from '@vitejs/plugin-vue'
 export default defineConfig({
   plugins: [vue()],
   base: './',
+  build: {
+    target: 'es2020', // you can also use 'es2020' here
+    outDir: './docs',
+    minify: 'esbuild',
+  }
 })
